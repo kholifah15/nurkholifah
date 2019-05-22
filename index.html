@@ -1,0 +1,527 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="data mining">
+      
+      
+        <link rel="canonical" href="https://squidfunk.github.io/mkdocs-material/">
+      
+      
+        <meta name="author" content="Nur Kholifah">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
+    
+    
+      
+        <title>Data Mining</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.750b69bd.css">
+      
+        <link rel="stylesheet" href="assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "None", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#metode-clustering-k-means" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://squidfunk.github.io/mkdocs-material/" title="Data Mining" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Data Mining
+            </span>
+            <span class="md-header-nav__topic">
+              K-MEANS
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/squidfunk/mkdocs-material" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    squidfunk/mkdocs-material
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="." title="K-MEANS" class="md-tabs__link md-tabs__link--active">
+        K-MEANS
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://squidfunk.github.io/mkdocs-material/" title="Data Mining" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Data Mining
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/squidfunk/mkdocs-material" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    squidfunk/mkdocs-material
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="." title="K-MEANS" class="md-nav__link md-nav__link--active">
+      K-MEANS
+    </a>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="KNN/" title="KNN" class="md-nav__link">
+      KNN
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="DECITION-TREE/" title="DECITION TREE" class="md-nav__link">
+      DECITION TREE
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h4 id="metode-clustering-k-means"><strong>METODE CLUSTERING K-MEANS</strong></small><a class="headerlink" href="#metode-clustering-k-means" title="Permanent link">&para;</a></h4>
+<h4 id="_1"><img alt="" src="assets/images/kmeans.jpg" /><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<h1 id="1-pengertian-clustering"><strong>1.</strong>      <strong>PENGERTIAN CLUSTERING</strong><a class="headerlink" href="#1-pengertian-clustering" title="Permanent link">&para;</a></h1>
+<p>Menurut Eko Prasetyo (2012) mengatakan bahwa metode <em>K-Means</em> ini mempartisi data kedalam kelompok sehingga data berkarakteristik sama dimasukan kedalam sat kelompok yang sama dan data yang berkarakteristik berbeda dikelompokkan kedalam kelompok yang lain.</p>
+<p>Clustering merupakan suatu metode penganalisaan data, yang sering di masukan sebagai salah satu dari metode data meaning, yang mana tujuan dari clustering ini untuk melakukan pengelompokan data berdasarkan karakteristik yang sama ke suatu wilayah yang sama dan data yang berbeda je wilayah lain. Untuk pengelompokan ke wilayah yang berbeda di sebut dengan K-mean clustering. K-means yakni salah satu bentuk dari algoritma clustering non hirarki.</p>
+<p>Pada umumnya tujuan dari algoritma ini ialah membagi data atau disebut dengan mempartisi data yang ada ke dalam bentuk satu maupun lebih clusternya, membagi menjadi beberapa kelompok cluster. Pada algoritma ini bersifat menerima masukan dari berupa data tanpa adanya label kelas. Berbanding balik dengan sifat metode supervised learning yang menerima masukan dari berupa vektor data dan memiliki label data. </p>
+<p>Metode ini akan melakukan pembagian data ke dalam satu cluster yang sama apabila ada data yang mempunyai bentuk karakteristik berbeda akan di tempatkan ke dalam cluster yang lain. Secara umum pada metode ini dapat membuat proses pengelompokan dangan prosedur yang ada sebagai berikut;</p>
+<ul>
+<li>Menentukan      jumlah dari cluster pembagian.</li>
+<li>Mengalokasikan      data secara acak ke cluster yang telah ada.</li>
+<li>Menghitung      rata-rata pada setiap cluster dari data yang ada tergabung di dalamnya.</li>
+<li>Mengalokasikan      kembali semua data yang ada ke cluster terdekat</li>
+<li>Mengulang      proses ke 3 sampai tidak ada lagi perubahan ataupun perubahan yang terjadi      masih sudah di bawah trheshold.</li>
+</ul>
+<p>Berikut kelebihan dan kekurangan dari k-means clustering Kelebihan k-means:</p>
+<p><strong>Kelebihan k-means</strong></p>
+<ol>
+<li>Mudah      dilakukan saat pengimpelementasian dan di jalankan.</li>
+<li>Waktu      yang di butuhkan untuk melakukan pembelajaran relatif lebih cepat.</li>
+<li>Sangat      fleksibel, adaptasi yang mudah untuk di lakukan</li>
+<li>Sangat      umum penggunaannya.</li>
+<li>Menggunakan      prinsip yang sederhana dapat di jelaskan dalam non-statistik.</li>
+</ol>
+<p><strong>Kekurangan dari k-means:</strong></p>
+<ol>
+<li>Sebelum      algoritma di jalankan, titik K diinisialisasikan secara random sehingga      pengelompokan data yang di dapatkan bisa berbeda-beda. Namun apabila nilai      yang diperoleh acak untuk penginisialisasi kurang baik maka pengelompokan      yang didapatkn menjadi tidak optimal.</li>
+<li>Apabila      terjebak dalam kasus yang biasanya di sebut dengan curse of      dimensionality. Hal ini pun akan terjadi apabila salah satu data untuk      melakukan pelatihan mempunyai dimensi yang sangat banyak, sebagai contoh;      jika ada data pelatihan yang terdiri dari 2 buah atribut saja maka      dimensinya ada 2 dimensi pula, namun akan berbeda jika ada 20 atribut maka      akan ada 20 dimensi yang di miliki. Adapun salah satu dari cara kerja      algoritma cluster ini ialah untuk mencari jarak terdekat dari antara k      titik dangan titik lainnya. Apabila ingin mencari jarak untuk antar titik      dari 2 dimensi hal itu masih mudah untuk di lakukan, namun bagaimana      dengan 20 buah dimensi hal tersebut akan menjadi lebih sulit untuk di      lakukan pencarian jarak.</li>
+<li>Apabila      hanya ada terdapat beberapa buah titik sampel data yang ada, maka hal yang      mudah untuk melakukan penghitungan dan mencari jarak titik terdekat dengan      k titik yang telah di lakukan inisialisasi yang secara acak. Namun jika      ada banyak titik data, misalkan satu juta data, maka perhitungan dan      pencarian titik terdekat akan sangat membutuhkan waktu yang lama. Proses      tersebut dapat dipercepat namun dibutuhkan sebuah struktur data yang lebih      rumit seperti kD-tree atau hashing untuk melakukan proses tersebut.</li>
+<li>Adanya      penggunaan k buah random, tidak ada jaminan untuk menemukan kumpulan      cluster yang optimal</li>
+</ol>
+<p><strong>2.</strong>      <strong>METODE K-MEANS</strong></p>
+<p>K-Means clustering merupakan salah satu metode data clustering non-hirarki yang mengelompokkan data dalam bentuk satu atau lebih cluster/kelompok. Data-data yang memiliki karakteristik yang berbeda dikelompokkan dengan cluster/kelompok memiliki tingkat variasi yang kecil.</p>
+<p>Langkah-langkah melakukan clustering dengan metode K-Means adalah sebagai berikut :</p>
+<p>1)      Siapkan data terlebih dahulu yang akan dicluster baik data iris ataupun data yang lainnya. Pada langkah kali ini saya menggunakan data Iris untuk mengcluster nya.</p>
+<p>2)  Pada data iris terdapat 150 data, mempunyai 3 kelas, dan mempunyai 5 kolom / fitur. Setelah itu kita ambil masing-masing 5 data pada tiap kelasnya. Yaitu 5 data pada kelas “iris-setosa”, 5 data pada kelas “iris-versicolor”, dan 5 data pada kelas “iris-virginica”. Maka kita dapatkan 15 data yang akan kita clustering.</p>
+<p><img alt="" src="assets/images/1.PNG" /></p>
+<p>3)      Setelah itu kita tentukan centroid pada 15 data tadi secara acak pada tiap kelasnya.
+Saya menggunakan centroid sebanyak 3 centroid.</p>
+<p><img alt="" src="assets/images/2.PNG" /></p>
+<p>4)      Hitunglah jarak setiap data pada masing-masing centroid menggunakan rumus Jarak Euclidian Distance.</p>
+<p>Cara menghitungnya yaitu data iris yang berjumlah 15 tadi dikurangi dengan masing centroid lalu dipangkatkan 2 dan dikarkan pangkatkan.</p>
+<p>5)      Setelah menghitung jarak tersebut, maka kita mengelompokkan setiap data berdasarkan jarak terdekat dengan centroidnya. Dari hasil tersebut kita peroleh bahwa pada iterasi nomor 1 sampai 5 itu masuk pada cluster pertama, pada nomor 9 itu masuk pada cluster ke 2, dan sisanya masuk ada cluster ke 3.</p>
+<p><img alt="" src="assets/images/3.PNG" /></p>
+<p>6)      Lalu kita kumpulkan masing-masing cluster tersebut yang sudah sesuai dengan jarak
+terdekat dengan centroidnya sesuai dengan data yang awal tadi (dat iris yang 15
+tadi) untuk menghitung rata-rata centroid baru.</p>
+<p><img alt="" src="assets/images/4.PNG" /></p>
+<p>7)      Setelah itu kita menghitung nilai rata-rata untuk menentukan pusat cluster baru dari
+data-data yang ada pada centroid yang sama.</p>
+<p><img alt="" src="assets/images/5.PNG" /></p>
+<p>8)      Setelah itu kita ulangi mulai dari langkah pada nomor 4.</p>
+<p><img alt="" src="assets/images/6.PNG" /></p>
+<p>Pada hasil tersebut diperoleh pada nomor 1 sampai  5 itu masuk pada cluster 1, pada nomor 9, 12 masuk pada cluster ke-2. Sedangkan sisanya masuk pada cluster ke-3.</p>
+<p>Namun pada tahap ini ternyata, setelah iterasi kedua ini dikelompokkan ternyata hasilnya belum sama anatar anggota cluster. Maka harus mengulanginya sampai anggota pada tiap cluster tersebut tidak pindah-pindah.</p>
+<p>9)      Lalu kita menghitung rata-rata dari anggota tiap cluster pada iterasi ke-2 untuk menentukan pusat cluster baru .</p>
+<p><img alt="" src="assets/images/7.PNG" /></p>
+<p>10)      Lalu kita ulang langkah pada nomor 4 tersebut.</p>
+<p><img alt="" src="assets/images/8.PNG" /></p>
+<p>Dari itersi ke-3 tersebut kita peroleh pada nomor 1 sampai 5 itu masuk pada cluster 1, dan pada nomor 7, 9, 13 itu masuk pada cluster nomor 2. Dan sisanya masuk pada cluster ke-3.</p>
+<p>Namun pada iterasi ke-2 dan ke-3 ternyata hasil dari anggota pada tiap clusternya tidak sama maka harus mengulanginya pada langkah ke-4 tadi.</p>
+<p>11)      Setelah itu menghitung rata-rata dari anggota tiap cluster pada iterasi ke-3 untuk menentukan pusat cluster baru .</p>
+<p><img alt="" src="assets/images/9.PNG" /></p>
+<p>12)      Ulangi langkah pada nomor 4 tadi sampai anggota pada tiap clusternya hasolnya sama atau anggota pada tiap clusternya tidak berpindah-pindah.</p>
+<p><img alt="" src="assets/images/10.PNG" /></p>
+<p>13)      Dari hasil diatas ternyata pada iterasi ke-3 dan iterasi ke-4 ternyata hasilnya sama atau anggota pada tiap clusternya tersebut tidak berpindah. Jadi langkah menghitung cluster sudah selesai.</p>
+<p>14)      Setelah itu kitamenghitung jumlah validity.</p>
+<p><img alt="" src="assets/images/15.PNG" /></p>
+<p>·         pertama kita menghitung intra. Cara menghitungnya adalah (data testing – centroid ) dipangkatkan 2. </p>
+<p><img alt="" src="assets/images/12.PNG" /></p>
+<p>·         Setelah itu jumlahkan semua data intra tersebut yang sudah dihitung tadi. </p>
+<p><img alt="" src="assets/images/13.PNG" /></p>
+<p>·         setelah itu menghitung inter. Cara menghitungnya, (centroid 1 – centroid 2)², (centroid 1 – centroid 3) ², (centroid 2 – centroid 3) ². Jika semuanya sudah dihitung maka urutkan hasil dari perhitungan inter tersebut mulai dari yang terkecil.</p>
+<p><img alt="" src="assets/images/14.PNG" /></p>
+<p>·         Jika semuanya sudah selesai, maka sekarang kita menghitung validity dengan cara.</p>
+<p><img alt="" src="assets/images/15.PNG" /></p>
+<p>8)      Lagkah selanjutnya menghitung rumus sillhoutte</p>
+<p>·         Hitunglah rata-rata pada tiap kelas dari data training (data yang diambil sebanyak 15 tadi).</p>
+<p><img alt="" src="assets/images/16.PNG" /></p>
+<p>·         Setelah data training dihitung rata-rata pada tiap kelasnya, maka menghitung a(i) atau disebut juga menghitung jarak pada objek dengan cluster yang sama.</p>
+<p><img alt="" src="assets/images/17.PNG" /></p>
+<p>·         Setelah menghitung a(i), maka selanjutnya menghitung b(i) atau disebut juga menghitung rata-rata jarak objek lain yang berbeda pada cluster lain, kenudian ambil nilai yang paling minimum.</p>
+<p><img alt="" src="assets/images/18.PNG" /></p>
+<p>·         Setelah itu menghitung s(i) atau disebut juga dengan menghitung nilai silhouette coefficient. Cara menghitungnya yaitu : 1 – (a(i) / b(i))</p>
+<p><img alt="" src="assets/images/19.PNG" /></p>
+<p>Nilai Silhouette Coefficient terletak pada kisaran nilai -1 hingga 1. Semakin nilai Silhouette Coefficient mendekati 1, maka semakin baik pengelompokan data dalam satu cluster. Jika Silhouette Coefficient mendekati nilai -1, maka semakin buruk pengelompokan data didalam satu cluster.</p>
+<p><strong><a href="https://www.academia.edu/23539465/DATA_MINING_MENGGUNAKAN_ALGORITMA_KMEANS_CLUSTERING_UNTUK_MENENTUKAN_STRATEGI_PROMOSI_UNIVERSITAS_DIAN_NUSWANTORO">https://www.academia.edu/23539465/DATA_MINING_MENGGUNAKAN_ALGORITMA_KMEANS_CLUSTERING_UNTUK_MENENTUKAN_STRATEGI_PROMOSI_UNIVERSITAS_DIAN_NUSWANTORO</a></strong> </p>
+<p><a href="https://garudacyber.co.id/artikel/1514-kelebihan-dan-kekurangan-k-means-clustering">https://garudacyber.co.id/artikel/1514-kelebihan-dan-kekurangan-k-means-clustering</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="KNN/" title="KNN" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                KNN
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2019 Martin Donath
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/squidfunk" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/squidfunk" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/squidfunk" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.8c0d971c.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+    
+  </body>
+</html>
